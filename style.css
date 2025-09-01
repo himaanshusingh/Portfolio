@@ -98,7 +98,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
 }
 
@@ -919,4 +919,5 @@ button:focus {
     scroll-behavior: auto;
   }
 }
+
 

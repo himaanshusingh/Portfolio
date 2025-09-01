@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HimanshuSingh-Portfolio</title>
-    <link rel="shortcut icon" href="logo.png" type="image/png" />
+    <title>Your Name - Portfolio</title>
+    <link rel="shortcut icon" href="icon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -44,18 +48,64 @@
         </div>
         <div class="hero-image">
           <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Abstract developer-themed design with code brackets and connection dots -->
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style="stop-color: #6366f1; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #06b6d4; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+
+            <!-- Main abstract shape -->
             <path
-              fill="#3b82f6"
-              d="M189.5,308.5Q181,367,141,403.5Q101,440,76.5,388Q52,336,63,293Q74,250,63,207Q52,164,76.5,112Q101,60,141,96.5Q181,133,189.5,191.5Q198,250,189.5,308.5Z"
+              fill="url(#grad1)"
+              d="M350,150 Q400,100 450,150 Q500,200 450,250 Q500,300 450,350 Q400,400 350,350 Q300,300 250,350 Q200,400 150,350 Q100,300 150,250 Q100,200 150,150 Q200,100 250,150 Q300,200 350,150 Z"
+              opacity="0.8"
+            />
+
+            <!-- Code bracket elements -->
+            <path
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="4"
+              d="M200,200 L180,200 Q160,200 160,220 L160,280 Q160,300 180,300 L200,300"
             />
             <path
-              fill="#2563eb"
-              d="M307,307.5Q298,365,247,389Q196,413,150.5,390.5Q105,368,93,319Q81,270,93,221.5Q105,173,150.5,150.5Q196,128,247,151.5Q298,175,307,212.5Q316,250,307,307.5Z"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="4"
+              d="M300,200 L320,200 Q340,200 340,220 L340,280 Q340,300 320,300 L300,300"
             />
-            <path
-              fill="#1e40af"
-              d="M338.5,307Q299,364,247,389.5Q195,415,150,390.5Q105,366,93,317.5Q81,269,93,221.5Q105,174,150,150Q195,126,247,150.5Q299,175,338.5,212.5Q378,250,338.5,307Z"
-            />
+
+            <!-- Connection nodes -->
+            <circle cx="220" cy="220" r="8" fill="#ffffff" />
+            <circle cx="220" cy="260" r="8" fill="#ffffff" />
+            <circle cx="280" cy="220" r="8" fill="#ffffff" />
+            <circle cx="280" cy="260" r="8" fill="#ffffff" />
+
+            <!-- Floating dots -->
+            <circle cx="180" cy="180" r="5" fill="#ffffff" opacity="0.7">
+              <animate
+                attributeName="cy"
+                values="180;170;180"
+                dur="4s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="320" cy="320" r="5" fill="#ffffff" opacity="0.7">
+              <animate
+                attributeName="cx"
+                values="320;330;320"
+                dur="5s"
+                repeatCount="indefinite"
+              />
+            </circle>
           </svg>
         </div>
       </section>
@@ -193,41 +243,72 @@
         <div class="container">
           <h2>Get In Touch</h2>
           <div class="contact-content">
-            <p>
+            <p class="contact-description">
               Have a project in mind or want to discuss potential opportunities?
-              Feel free to reach out!
+              Feel free to reach out! I'm always open to discussing new projects
+              and ideas.
             </p>
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- Replace with your email icon image -->
-                  <img src="email.png" alt="Email" />
+
+            <div class="contact-container">
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Email</h3>
+                    <p>himanshusingh1k@gmail.com</p>
+                  </div>
                 </div>
-                <div>
-                  <h3>Email</h3>
-                  <p>himanshusingh1k@gmail.com</p>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Phone</h3>
+                    <p>+91 8882072789</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>Noida, India</p>
+                  </div>
                 </div>
               </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- Replace with your phone icon image -->
-                  <img src="phone.png" alt="Phone" />
+
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
                 </div>
-                <div>
-                  <h3>Phone</h3>
-                  <p>+91 8882072789</p>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
                 </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- Replace with your location icon image -->
-                  <img src="location.png" alt="Location" />
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
                 </div>
-                <div>
-                  <h3>Location</h3>
-                  <p>Noida, India</p>
-                </div>
-              </div>
+                <button type="submit" class="btn form-btn">Send Message</button>
+              </form>
             </div>
           </div>
         </div>
@@ -236,22 +317,60 @@
     <!-- Footer -->
     <footer>
       <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Himanshu Singh</h3>
+            <p>
+              Web Developer & UI/UX Designer creating beautiful, functional
+              websites that deliver exceptional user experiences.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> himanshusingh1k@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 8882072789</p>
+            <p><i class="fas fa-map-marker-alt"></i> Noida, India</p>
+          </div>
+        </div>
+
         <div class="social-links">
-          <!-- <a href="linkedin.png"><i class="fab fa-linkedin-in"></i></a> -->
           <a
             href="https://www.linkedin.com/in/himanshu-singh-75774522a/"
             target="_blank"
-            ><img src="linkedin.png" alt="linkedin"
-          /></a>
-          <a href="github.png"><img src="github.png" alt="linkedin" /></a>
-          <a href="x.png"><img src="x.png" alt="linkedin" /></a>
-          <a href="instagram.png"><img src="instagram.png" alt="linkedin" /></a>
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fab fa-x"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
-        <p>&copy; 2025 Himanshu Singh. All rights reserved.</p>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Himanshu Singh. All rights reserved.</p>
+        </div>
       </div>
     </footer>
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
-
-
